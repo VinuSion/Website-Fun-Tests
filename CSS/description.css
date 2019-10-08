@@ -1,0 +1,115 @@
+/*Imports a font from Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/* Sets the default Font for the website*/
+* {
+	font-family: 'Poppins', sans-serif; /*This sets the font that you imported from Google 
+	Fonts, and adds a back-up one for the other web-browsers that dont support the first one.*/
+}
+
+/*STYLING FOR THE BODY OF THE PAGE (BASICALLY, THESE ARE DEFAULT VALUES)*/
+body {
+	margin: 0px; /*Sets everything on the body to have 0px of spacing bounds.*/
+	padding: 0px; /*Sets everything on the body to have 0px of spacing.*/
+	display: flex; /*Makes the content display on top of eachother on the entire body.*/
+	justify-content: center; /*Centers on Top (Width Center).*/
+	align-items: center; /*Aligns everything to on the body the true center (Height Center).*/
+	min-height: 100vh; /*Sets the height of the content to be perfectly centered by setting that height.*/
+	background: #343257; /*Background color for the body.*/
+}
+
+/*STYLING FOR THE CONTAINER*/
+.container {
+	width: 1500px; /*Sets the entire width of the cards, wether it being 100% the width of the screen or any value really.*/
+	display: grid; /*Makes the individual cards be stacked on one another depending on the width of the container.*/
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /*It defines the space between the sizng of the columns in the grid.*/
+	grid-gap: 15px; /*Defines the gap between the columns of the grid.*/
+	margin: 0px auto; /*This basically does nothing because it sets the margin top and bottom to 0px and the left & right to auto.*/
+}
+
+/*STYLING FOR THE CARD INSIDE THE CONTAINER*/
+.container .card {
+	position: relative; /*This makes the position of the cards to be organized.*/
+	width: 100%; /*Sets the width of the cards.*/
+	height: 600px; /*Sets the height of the cards.*/
+	margin: 20px auto; /*Sets the margin of the cards so that it stays in the center and to space them out from one another evenly.*/
+	background: #fff; /*Background color for the card.*/
+	box-shadow: 0px 15px 0px rgba(0,0,0,0.4); /*Sets the shadow of the card to have 0px to the right (Because you know, 
+	positive values go to the right and if it were negative it would go to the left, 15px to the bottom, 0px in blur, and lastly the color and opacity with rgba.*/
+}
+
+/*STYLING FOR THE GENERAL FACE OF THE CARD (WHICH IS THE FACE THAT CONNECTS/SYNCRONIZES BOTH FACE 1 & 2.)*/
+.container .card .face {
+	position: absolute; /*Sets the position absolute to the card.*/
+	bottom: 0px; /*Makes the card to NOT go from the bottom and stay in its place with 0px.*/
+	left: 0px; /*Makes the card to NOT go from the left and stay in its place with 0px.*/
+	width: 100%; /*Makes both faces stay in place with the card by being 100% the width.*/
+	height: 100%; /*Makes both faces stay in place with the card by being 100% the height.*/
+	display: flex; /*Makes the content display to the left relative to the card itself.*/
+	justify-content: center; /*Centers on Top (Width Center).*/
+	align-items: center; /*Aligns everything to the true center (Height Center).*/
+}
+
+/*STYLING FOR THE FACE1 OF THE CARD (WHICH IS THE FACE ON THE CARD (THE INSIDE OF THE CARD) BEHIND THE FACE2 (THE ONE WITH THE NUMBERS))*/
+.container .card .face.face1 {
+	box-sizing: border-box; /*Sets the sizing of the content to fit the card.*/
+	padding: 20px; /*Sets the spacing of the content on the card to be 20px on all sides.*/
+}
+
+/*STYLING FOR THE TITLE OF THE TEXT ON THE CARD (H2)*/
+.container .card .face.face1 h2 {
+	margin: 0px; /*Sets the spacing bounds of the title on the card to be 0px on all sides.*/
+	padding: 0px; /*Sets the spacing of the title on the card to be 0px on all sides.*/
+}
+
+/*STYLING FOR THE FACE2 OF THE CARD (THE DEFAULT COLOR PLUS THE TRANSITION)*/
+.container .card .face.face2 {
+	background: #111; /*This is the default background color for the face2.*/
+	transition: 0.5s; /*Sets the duration time for the face2 to move away and show the face1 on the card (which is the text content itself).*/
+}
+
+/*STYLING FOR THE FACE2 (WHICH IS THE FACE INFRONT OF THE FACE1 (THAT CONTAINS THE CONTENT) ON THE CARD)*/
+.container .card:nth-child(1) .face.face2 {
+	background: linear-gradient(45deg, #3503ad, #f7308c);
+}
+
+/*STYLING FOR THE FACE2 OF THE CARD (THE HEIGHT THAT THE FACE2 WILL REMAIN OVER THE CARD ONCE YOU HOVER OVER IT)*/
+.container .card:hover .face.face2 {
+	height: 50px; /*Sets the height of the face2 when you hover over the card.*/
+}
+
+/*STYLING FOR THE FACE2 OF THE CARD BEFORE THE CONTENT OVER IT*/
+.container .card .face.face2:before {
+	content: ''; /*This is so that nothing appears before you hover the face2 of the card or the card in general.*/
+	position: absolute; /*Makes face2 posiiton absolute to the card.*/
+	/*This part BELOW is practically useless, but do it anyways.*/
+	top: 0px; /*Sets the card to NOT go from the top and stay in its place with 0px.*/
+	left: 0px; /*Sets the card to NOT go from the left and stay in its place with 0px.*/
+	width: 50%; /*Makes face2 50% the width of the card so that it can all fit in its place.*/
+	height: 100%; /*Makes face2 100% the height of the card so that it can all fit in its place.*/
+}
+
+/*STYLING FOR THE TITLE OF FACE2 (IN THIS CASE ITS THE DESCRIPTION TITLE)*/
+.container .card .face.face2 h2 {
+	margin: 0px; /*Sets the spacing bounds of the title on face2 to be 0px on all sides.*/
+	padding: 0px; /*Sets the spacing of the title on face2 to be 0px on all sides.*/
+	/*The part ABOVE is practically useless but do it anyways.*/
+	font-size: 10em; /*Size of the font of the title.*/
+	color: #fff; /*Color of the title text.*/
+	transition: 0.5s; /*Transition duration when you hover over the title (also card in general).*/
+	text-shadow: 0px 4px 0px rgba(0,0,0,0.4); /*Sets the text shadow of the title in face2 (the numbers).*/
+}
+
+/*STYLING FOR THE TITLE OF FACE2 (WHEN YOU HOVER OVER IT)*/
+.container .card:hover .face.face2 h2 {
+	font-size: 2em; /*Transition for the numbers to scale down to 2em when you hover it.*/
+}
+
+
+
+
+
+
+
+
+

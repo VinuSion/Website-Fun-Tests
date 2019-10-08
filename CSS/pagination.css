@@ -1,0 +1,154 @@
+/*Imports a font from Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/* Sets the default Font for the website*/
+*{
+    margin: 0px; /*Sets everything to have 0px of spacing bounds.*/
+    padding: 0px; /*Sets everything to have 0px of spacing.*/
+    box-sizing: border-box; /*Sets the sizing of the content to fit the pagination UI.*/
+	font-family: 'Poppins', sans-serif; /*This sets the font that you imported from Google 
+	Fonts, and adds a back-up one for the other web-browsers that dont support the first one.*/
+}
+
+/*STYLING FOR THE ENTIRE BODY OF THE PAGE*/
+body{
+    display: flex; /*Makes the content display on top of eachother on the entire body.*/
+    justify-content: center; /*Centers on Top (Width Center).*/
+    align-items: baseline; /*Aligns everything to on the body to the top of the page.*/
+	min-height: 100vh; /*Sets the height of the content to be perfectly centered by setting that height.*/
+    background: rgb(49, 46, 56); /*Background color for the body.*/
+}
+
+/*STYLING FOR THE UNORDERED LIST (BASICALLY THE ENTIRE PAGINATION)*/
+ul{
+    position: relative; /*Pretty useless, but it just sets the content to be where it needs to be.*/
+    background: rgb(69, 65, 78); /*Background color for the pagination.*/
+    display: flex; /*Makes the content display one item next to eachother on the pagination.*/ 
+    padding: 10px 20px; /*Sets padding top and bottom to 10px and left & right to 20px.*/
+    border-radius: 50px; /*Sets the border radius diameter to be 50px.*/
+    box-shadow: 0px 5px 0px rgba(0,0,0,0.2); /*Sets the shadow of the pagination to have 0px to the right (Because you know, positive values go to the right and if it were negative it would go to the left) 5px to the bottom, 0px in blur, and lastly the color and opacity with rgba.*/
+    margin-top: 3em; /*Sets the top margin spacing bounds to be 3em.*/
+}
+
+/*STYLING FOR EVERY LIST ELEMENT OF THE UNORDERED LIST (BASICALLY EVERY ELEMENT OF THE ENTIRE PAGINATION)*/
+ul li{
+    list-style: none; /*This sets the list to not have any of those bullet points.*/
+    line-height: 50px; /*Makes every line of any text/paragraph to have more space between eachother.*/
+    margin: 0px 3px; /*This is so that every list element (every number page) appears with a bit of spacing on one another, instead of being closely tight to one another.*/
+}
+
+/*STYLING FOR EVERY NUMBER PAGE ELEMENT OF THE PAGINATION (OVERALL SPACING)*/
+ul li.pageNumber{
+    width: 50px; /*Width of every number.*/
+    height: 50px; /*Height of every number.*/
+    line-height: 50px; /*Makes every line of any text/paragraph to have more space between eachother.*/
+    text-align: center; /*Aligns text to the center.*/
+}
+
+/*STYLING FOR EVERY LINK OF EVERY NUMBER PAGE ELEMENT OF THE PAGINATION (COLORING AND STYLING)*/
+ul li a{
+    display: block; /*This is so that every number of the pagination actually appears like a circle and not a line, hence the display: block.*/
+    text-decoration: none; /*Makes it so that links dont have that underline.*/
+    color: rgb(255, 255, 255); /*Text color.*/
+    font-weight: 600; /*Make the font bolder with bigger values.*/
+    border-radius: 50%; /*Sets the border radius diameter of every link on each element to be 50%.*/
+}
+
+/*STYLING FOR EVERY PAGE NUMBER BOTH WHEN YOU HOVER OVER ONE, AND WHEN ACTIVE.*/
+ul li.pageNumber:hover a,
+ul li.pageNumber.active a{
+    background: rgb(255, 255, 255); /*Background color for every page number, when you hover over them and when its active.*/
+    color: rgb(0, 0, 0); /*Text color for every page number, when you hover over them and when its active. */
+}
+
+/*STYLING FOR THE FIRST SELECTED LI CHILD (PREVIOUS ELEMENT)*/
+ul li:first-child{
+    margin-right: 25px; /*Sets the margin right bounds to 25px so that its not too tightly close to the number pages.*/
+    font-weight: 700; /*Makes the font bolder to 700.*/
+    font-size: 20px; /*Makes the font bigger by 20px.*/
+}
+
+/*STYLING FOR THE LAST SELECTED LI CHILD (NEXT ELEMENT)*/
+ul li:last-child{
+    margin-left: 25px; /*Sets the margin right bounds to 25px so that its not too tightly close to the number pages.*/
+    font-weight: 700; /*Makes the font bolder to 700.*/
+    font-size: 20px; /*Makes the font bigger by 20px.*/
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+div.box{
+    width: 1000px;
+    height: 700px;
+    background: rgb(69, 65, 78);
+    position: absolute;
+    top: 200px; 
+    border-radius: 3em;
+    box-shadow: 0px 7px 0px rgba(0,0,0,0.2);
+}
+
+div.box h1.title{
+    text-align: center;
+    margin: 20px 0px;
+    color: #fff;
+}
+
+div.box p.text{
+    text-align: center;
+    margin: 20px 50px;
+    color: rgb(255, 255, 255); /*Text color.*/
+    font-weight: 580;
+}
+
+div.box button{
+    background: #0099ff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin: 40px 0px;
+    position: relative;
+    left: 45%;
+    cursor: pointer;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*
+    div.box_second{
+        width: 1000px;
+        height: 700px;
+        background: #fff;
+        position: absolute;
+        top: 950px; 
+        border-radius: 3em;
+        box-shadow: 0px 7px 0px rgba(0,0,0,0.2);
+        margin-bottom: 50px; 
+    }
+
+    div.box_second h1.title{
+        text-align: center;
+        margin: 20px 0px;
+    }
+*/
+
+/*
+    div.box_second p.text{
+        text-align: center;
+        margin: 20px 50px;
+        color: #777; 
+        font-weight: 580;
+    }
+
+    div.box_second button{
+        background: #0099ff;
+        border: 0px solid black;
+        padding: 15px 30px;
+        border-radius: 25px;
+        color: #fff;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        margin: 40px 0px;
+        position: relative;
+        left: 45%;
+    }
+*/

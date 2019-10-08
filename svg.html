@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SVG Practice</title>
+    <style>
+    /* .hamburger{
+        float: right;
+        margin: 0px 10px;
+    } */
+    </style>
+</head>
+<body>
+
+    <!-- <svg viewBox="120 50 10 150" width="250" height="250">
+
+        <circle r="120" cx="125" cy="105" fill="aquamarine"/>
+        <circle r="80" cx="125" cy="125" fill="#4fe7f7"/>
+        
+        <rect rx="30" ry="30" x="75" y="75" height="100" width="100" fill="#4f63f7" />
+
+        <polygon fill="#965cfa" points="50,50 125,125 200,50 200,200 125,125 50,200" />
+
+    </svg> -->
+
+
+    <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <line class="line-one" x1="25" y1="42" x2="75" y2="42" fill="none" stroke="#000" stroke-width="4px"/>
+        <line class="line-two" x1="25" y1="50" x2="75" y2="50" fill="none" stroke="#000" stroke-width="4px"/>
+        <line class="line-three" x1="25" y1="58" x2="75" y2="58" fill="none" stroke="#000" stroke-width="4px"/>
+    </svg>
+
+    <!-- PUT THIS IN THE HAMBURGER SVG SO THAT YOU CAN PUT IT IN THE CORNER OF THE PAGE! : width="150" height="150" -->
+
+    <!-- This belongs to the first circle, this is to just add a border basially: stroke="#1eb2ba" stroke-width="5px" 
+        This is another shape that you can make in the svg which is a line: 
+        <line x1="150" y1="150" x2="100" y2="100" stroke="#fa5cd5" stroke-width="10" />
+    
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="JS/hamburger.js"></script>
+</body>
+</html>
